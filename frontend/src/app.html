@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" class="dark">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+		<style>
+			@font-face {
+				font-family: 'Icons';
+				src: url('%sveltekit.assets%/icon-at.ttf') format('truetype');
+				font-weight: normal;
+				font-style: normal;
+			}
+
+			.icons {
+				font-family: 'Icons', sans-serif;
+			}
+			.icons-64 {
+				font-size: 64px;
+			}
+			.icons-48 {
+				font-size: 48px;
+			}
+			.icons-32 {
+				font-size: 32px;
+			}
+			.icons-28 {
+				font-size: 28px;
+			}
+			.icons-24 {
+				font-size: 24px;
+			}
+			.icons-22 {
+				font-size: 22px;
+			}
+			.icons-20 {
+				font-size: 20px;
+			}
+			.icons-16 {
+				font-size: 16px;
+			}
+		</style>
+		<title>e-faturas 2.0</title>
+
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover" class="bg-gray-50 dark:bg-gray-800">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>
