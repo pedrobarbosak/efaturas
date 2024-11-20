@@ -6,4 +6,4 @@ Run:
 docker-compose up --build
 ```
 
-Visit `http://localhost:80`
+Visit http://localhost:80
