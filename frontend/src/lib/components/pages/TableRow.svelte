@@ -2,7 +2,7 @@
     import { Category, Invoice, Money } from '@/models/models';
     import { TableBodyCell, TableBodyRow } from 'flowbite-svelte';
     import CategoryIcon from '@/components/pages/CategoryIcon.svelte'
-    import { decodeHTML, getCategoryByName } from '@/utils';
+    import {censor, decodeHTML, getCategoryByName} from '@/utils';
     import { onDestroy, onMount } from "svelte";
     import { getInvoiceSSE } from '@/api';
     import { fly, fade } from 'svelte/transition';
@@ -50,16 +50,16 @@
         </TableBodyCell>
 
         <TableBodyCell class="truncate max-w-xs">
-            {invoice.document.date}
+            { invoice.document.date }
         </TableBodyCell>
 
         <TableBodyCell class="truncate max-w-xs">
-            {decodeHTML(invoice.document.number)} - {decodeHTML(invoice.document.description)}
+            { decodeHTML(invoice.document.number) } - { decodeHTML(invoice.document.description)}
         </TableBodyCell>
 
         <TableBodyCell class="truncate max-w-xs">
-            <div title="{invoice.issuer.nif} - {decodeHTML(invoice.issuer.name)}">
-                {invoice.issuer.nif} - {decodeHTML(invoice.issuer.name)}
+            <div title="{ invoice.issuer.nif } - { decodeHTML(invoice.issuer.name) }">
+                { invoice.issuer.nif } - { decodeHTML(invoice.issuer.name) }
             </div>
         </TableBodyCell>
 

@@ -23,3 +23,12 @@ export function initInvoices(input: Invoice[]) {
 
     return data
 }
+
+export function censor(input: string, n: number = 3) : string {
+    const str = String(input);
+
+    if (!str) return '';
+    if (str.length <= n) return str;
+
+    return str.slice(0, n) + '+'.repeat(str.length - n);
+}

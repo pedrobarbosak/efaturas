@@ -35,7 +35,7 @@
         nSelectedCategories = countSelectedCategories();
 
         if (invoices.length !== 0) {
-            lastDate = invoices[invoices.length - 1].document.date;
+            lastDate = invoices.reduce((p, c) => {return p?.document?.date > c?.document?.date ? p : c;})?.document.date || "---";
         }
     }
 
